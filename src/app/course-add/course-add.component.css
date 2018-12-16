@@ -1,0 +1,6 @@
+.main-container {
+  position: relative;
+  padding: 10px;
+  flex-direction: column;
+  width: 50%;
+}

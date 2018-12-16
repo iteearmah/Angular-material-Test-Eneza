@@ -1,0 +1,11 @@
+<mat-card class="main-container">
+  <mat-card-title>Add New Course</mat-card-title>
+  <form class="form" name="courseForm" [formGroup]="courseForm" (ngSubmit)="addNewCourse()">
+    <mat-form-field  [ngClass]="{'error': courseForm.controls['name'].errors}">
+      <input matInput placeholder="Name" required [formControl]="nameFormControl">
+    </mat-form-field>
+    <!--<mat-error *ngIf="courseForm.controls['name'].errors">{{getNameErrorMessage('name')}}</mat-error>-->
+    <br>
+    <button mat-raised-button color="primary" [disabled]="courseForm.invalid">Submit</button>
+  </form>
+</mat-card>
